@@ -29,23 +29,11 @@ export default function Nav() {
         </a>
 
         <ul
-          className="nav-links"
-          style={menuOpen ? {
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'fixed',
-            inset: 0,
-            top: '72px',
-            background: 'rgba(8,8,8,0.97)',
-            backdropFilter: 'blur(20px)',
-            padding: '32px 24px',
-            gap: '8px',
-            zIndex: 498,
-            borderBottom: '1px solid rgba(255,255,255,0.08)',
-          } : {}}
+          className={`nav-links${menuOpen ? ' nav-links-mobile-open' : ''}`}
+          aria-hidden={!menuOpen}
         >
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="nav-link-item">
               <a href={link.href} onClick={close}>{link.label}</a>
             </li>
           ))}
@@ -59,6 +47,7 @@ export default function Nav() {
           <button
             className="nav-toggle"
             aria-label="Abrir menú"
+            aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
           >
             <span style={menuOpen ? { transform: 'rotate(45deg) translate(5px,5px)' } : {}} />
