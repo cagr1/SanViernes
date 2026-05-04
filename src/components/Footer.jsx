@@ -17,7 +17,7 @@ const orderLinks = [
 
 const locationLinks = [
   { href: MAPS_URL, label: 'Av. 25 de Junio (Matriz)', external: true },
-  { href: MAPS_URL, label: 'Av. Las Palmeras (Sucursal)', external: true },
+  { href: 'https://www.google.com/maps/place/San+Viernes/@-3.2556301,-79.9632539,17z', label: 'Av. Las Palmeras (Sucursal)', external: true },
 ]
 
 function FooterCol({ title, links }) {

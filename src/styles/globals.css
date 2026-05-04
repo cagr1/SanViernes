@@ -1,6 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 
 body {
   font-family: var(--f-body);
@@ -108,7 +108,7 @@ button { cursor: none; font-family: var(--f-body); }
   backdrop-filter: blur(20px);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 10px 10px 10px 24px;
+  padding: 8px 10px 8px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,8 +129,8 @@ button { cursor: none; font-family: var(--f-body); }
 }
 
 .nav-logo-image {
-  width: 148px;
-  height: 68px;
+  width: 156px;
+  height: 42px;
   object-fit: contain;
 }
 
@@ -980,16 +980,96 @@ button { cursor: none; font-family: var(--f-body); }
   }
   .hero-right { min-height: 360px; }
   .nav-logo-image {
-    width: 128px;
-    height: 58px;
+    width: 132px;
+    height: 36px;
   }
-  .menu-card { padding: 22px; }
+  .menu-root {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  .menu-header {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  .menu-intro {
+    margin-top: 14px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+  .menu-scroll-hint {
+    font-size: 0.76rem;
+  }
+  .menu-grid {
+    gap: 16px;
+  }
+  .menu-card {
+    padding: 18px;
+    border-radius: 22px;
+  }
+  .menu-card-head {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .menu-card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+  .menu-card-title {
+    font-size: 1.45rem;
+  }
+  .menu-card-label {
+    font-size: 0.64rem;
+  }
   .menu-item-row {
     grid-template-columns: 1fr auto;
     gap: 10px;
+    align-items: start;
+  }
+  .menu-item-name {
+    font-size: 0.94rem;
+    line-height: 1.15;
+  }
+  .menu-item-desc {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    line-height: 1.38;
+  }
+  .menu-item-price {
+    font-size: 0.98rem;
+    padding-top: 2px;
   }
   .menu-item-line { display: none; }
+  .menu-note {
+    gap: 10px;
+    margin-top: 18px;
+    padding: 14px 16px;
+  }
+  .menu-note-pill {
+    font-size: 0.96rem;
+  }
+  .menu-note p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
   .testimonial-marquee-card { max-width: 320px; min-height: 240px; }
   .testimonial-marquee-title { font-size: 1rem; }
   .testimonial-marquee-subtitle { font-size: 0.95rem; }
+  .footer-top {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-cols {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
 }

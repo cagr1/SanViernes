@@ -1,5 +1,8 @@
 node_modules/
 dist/
 .claude/
+.tmp-responsive/
 .DS_Store
 Thumbs.db
+
+.vercel
